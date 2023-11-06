@@ -1,6 +1,6 @@
 {
   "name": "railgun-wallet-fix-export",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "RAILGUN Wallet SDK, compatible with mobile, browser and nodejs environments.",
   "main": "dist/index.js",
   "license": "MIT",
