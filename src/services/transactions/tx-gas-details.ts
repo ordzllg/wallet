@@ -70,7 +70,7 @@ const estimateGas = (
  * Gas estimates can fail for relay-adapt transactions on L2s like Arbitrum.
  * This occurs on cross-contract calls (relay-adapt) which have a manual minimum gas limit set by Railgun Engine.
  */
-const shouldRemoveGasLimitForL2GasEstimate = (networkName: NetworkName) => {
+export const shouldRemoveGasLimitForL2GasEstimate = (networkName: NetworkName) => {
   switch (networkName) {
     case NetworkName.Arbitrum:
     case NetworkName.ArbitrumGoerli:
