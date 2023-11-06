@@ -19,7 +19,7 @@ import { walletForID } from '../railgun';
 import { convertTransactionStructToCommitmentSummary } from '../railgun/util/commitment';
 import { ContractTransaction } from 'ethers';
 
-const MAX_ITERATIONS_RELAYER_FEE_REESTIMATION = 5;
+export const MAX_ITERATIONS_RELAYER_FEE_REESTIMATION = 5;
 
 export const calculateRelayerFeeERC20Amount = (
   feeTokenDetails: FeeTokenDetails,
@@ -192,7 +192,7 @@ export const gasEstimateResponseDummyProofIterativeRelayerFee = async (
   );
 };
 
-const compareCircuitSizesTransactionStructs = (
+export const compareCircuitSizesTransactionStructs = (
   serializedA: TransactionStruct[],
   serializedB: TransactionStruct[],
 ) => {
@@ -212,7 +212,7 @@ const compareCircuitSizesTransactionStructs = (
   return true;
 };
 
-const relayerFeeWillOverflowBalance = async (
+export const relayerFeeWillOverflowBalance = async (
   tokenBalance: bigint,
   sendingERC20Amount: RailgunERC20Amount,
   relayerFeeERC20Amount: RailgunERC20Amount,
