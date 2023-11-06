@@ -112,7 +112,7 @@ export const getCachedProvedTransaction = (): ProvedTransaction => {
   return cachedProvedTransaction as ProvedTransaction;
 };
 
-const shouldValidateERC20AmountRecipients = (proofType: ProofType) => {
+export const shouldValidateERC20AmountRecipients = (proofType: ProofType) => {
   switch (proofType) {
     case ProofType.CrossContractCalls:
       // Skip validation for erc20AmountRecipients, which is not used
@@ -125,7 +125,7 @@ const shouldValidateERC20AmountRecipients = (proofType: ProofType) => {
   }
 };
 
-const shouldValidateRelayAdaptAmounts = (proofType: ProofType) => {
+export const shouldValidateRelayAdaptAmounts = (proofType: ProofType) => {
   switch (proofType) {
     case ProofType.CrossContractCalls:
     case ProofType.UnshieldBaseToken:
@@ -137,7 +137,7 @@ const shouldValidateRelayAdaptAmounts = (proofType: ProofType) => {
   }
 };
 
-const shouldValidateCrossContractCalls = (proofType: ProofType) => {
+export const shouldValidateCrossContractCalls = (proofType: ProofType) => {
   switch (proofType) {
     case ProofType.CrossContractCalls:
       // Only validate for Cross Contract proofs.
