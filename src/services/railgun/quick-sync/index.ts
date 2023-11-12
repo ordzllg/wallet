@@ -1,2 +1,2 @@
-export * from './quick-sync-events-graph';
+export * from './quick-sync-graph';
 
