@@ -38,9 +38,9 @@ export class ArtifactDownloader {
           artifactVariantString,
         ),
       ]),
-      45000,
+      450000,
       new Error(
-        `Timed out downloading artifact files for ${artifactVariantString} circuit. Please try again.`,
+        `Timed out(${450000}) downloading artifact files for ${artifactVariantString} circuit. Please try again.`,
       ),
     );
 
